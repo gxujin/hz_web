@@ -3,6 +3,7 @@ import reactDom from 'react-dom';
 import { BrowserRouter, HashRouter, Routes, Route } from 'react-router-dom';
 import Form from './Form'
 import Design from "./Design";
+import Form2 from './Form2'
 import commonObj from "./common";
 
 class App extends React.Component {
@@ -16,6 +17,8 @@ class App extends React.Component {
             element = <Design />;
         }else if('0' == type){
             element = <Form />;
+        }else if('2' == type){
+            element = <Form2 />;
         }else{
             element = <div>no found</div>;
         }
