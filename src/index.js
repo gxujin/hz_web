@@ -6,6 +6,11 @@ import Design from "./Design";
 import Form2 from './Form2'
 import Demo from './Demo'
 import commonObj from "./common";
+import Base64Image from "./Image";
+import Test from "./Test";
+import Test2 from "./Test2";
+
+console.log('this is index: ', this);
 
 class App extends React.Component {
     constructor() {
@@ -22,12 +27,15 @@ class App extends React.Component {
             element = <Form2 />;
         }else if('3' == type){
             element = <Demo />;
+        }else if('4' == type){
+            element = <Base64Image />;
         }else{
-            element = <div>no found</div>;
+            element = <Test2 />;
         }
         return element;
     }
     render() {
+        console.log('this is index render: ', this);
         return (
             <>
                 {this.get()}
